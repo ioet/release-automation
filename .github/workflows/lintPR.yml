@@ -1,0 +1,16 @@
+# This is a basic workflow to help you get started with Actions
+
+name: PR lint
+
+on:
+  pull_request:
+    types: ['opened', 'edited', 'reopened', 'synchronize']
+
+jobs:
+  pr-lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: seferov/pr-lint-action@master
+      with:
+        title-regex: '^\[PROJECT-\d*\](\ )'
+        title-regex-flags: 'g' # optional
