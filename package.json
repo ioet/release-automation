@@ -1,0 +1,24 @@
+{
+  "name": "release-automation",
+  "version": "1.0.0",
+  "description": "Releases Automation Framework",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ioet/release-automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ioet/release-automation/issues"
+  },
+  "homepage": "https://github.com/ioet/release-automation#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
