@@ -1,16 +1,20 @@
-name: bump and tag branch
+name: Bump version
 on:
   push:
     branches:
-      - master
+      - develop
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+      with:
+        fetch-depth: '0'
     - name: Bump version and push tag
-      uses: Instrument/github-tag-action@v1.0
+      uses: anothrNick/github-tag-action@1.17.2
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        BRANCH: master
-        BUMP: patch
+        WITH_V: true
+        RELEASE_BRANCHES: develop
+        DEFAULT_BUMP: patch
+        INITIAL_VERSION: 0.0.0
