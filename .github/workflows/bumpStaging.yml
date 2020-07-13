@@ -1,0 +1,20 @@
+name: Bump version
+on:
+  push:
+    branches:
+      - staging
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        fetch-depth: '0'
+    - name: Bump version and push tag
+      uses: anothrNick/github-tag-action@1.17.2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        WITH_V: false
+        RELEASE_BRANCHES: staging
+        DEFAULT_BUMP: minor
+        INITIAL_VERSION: 0.0.0
