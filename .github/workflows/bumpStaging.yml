@@ -11,7 +11,7 @@ jobs:
       with:
         fetch-depth: '0'
     - name: Bump version and push tag
-      uses: DiegoTinitana/github-tag-action@Test
+      uses: DiegoTinitana/bump_tag@master
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         WITH_V: true
