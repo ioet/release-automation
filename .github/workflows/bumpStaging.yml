@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - develop
+      - staging
+      - master
+      - production
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,10 +14,8 @@ jobs:
       with:
         fetch-depth: '0'
     - name: Bump version and push tag
-      uses: anothrNick/github-tag-action@1.17.2
+      uses: DiegoTinitana/bump_tag@master
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         WITH_V: true
-        RELEASE_BRANCHES: develop
-        DEFAULT_BUMP: patch
         INITIAL_VERSION: 0.0.0

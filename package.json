@@ -18,7 +18,5 @@
     "url": "https://github.com/ioet/release-automation/issues"
   },
   "homepage": "https://github.com/ioet/release-automation#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "dependencies": {}
 }
