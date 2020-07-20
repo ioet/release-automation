@@ -17,5 +17,4 @@ jobs:
       uses: DiegoTinitana/bump_tag@master
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        WITH_V: true
-        INITIAL_VERSION: 0.0.0
+
